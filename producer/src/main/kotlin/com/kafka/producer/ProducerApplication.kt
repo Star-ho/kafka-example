@@ -1,4 +1,4 @@
-package com.grpc.sender
+package com.kafka.producer
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

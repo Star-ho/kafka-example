@@ -1,10 +1,8 @@
-package com.grpc.sender
+package com.kafka.producer
 
-import org.springframework.beans.factory.annotation.Value
 import org.springframework.kafka.core.KafkaTemplate
 import org.springframework.stereotype.Service
 import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PathVariable
 import org.springframework.web.bind.annotation.RequestParam
 import org.springframework.web.bind.annotation.RestController
 
@@ -14,7 +12,7 @@ class ProducerController(
     private val kafkaProducer: KafkaProducer
 ) {
     @GetMapping
-    fun getOrder(@RequestParam message:String): String {
+    fun getOrder(@RequestParam message: String): String {
         kafkaProducer.sendMessage(message)
         return "1"
     }

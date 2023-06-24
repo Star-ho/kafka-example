@@ -1,4 +1,3 @@
-import com.google.protobuf.gradle.GenerateProtoTask
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
@@ -6,10 +5,9 @@ plugins {
     id("io.spring.dependency-management") version "1.1.0"
     kotlin("jvm") version "1.7.22"
     kotlin("plugin.spring") version "1.7.22"
-    id("com.google.protobuf") version "0.9.2"
 }
 
-group = "com.grpc"
+group = "com.kafka"
 version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_17
 
@@ -32,7 +30,6 @@ dependencies {
 
     implementation("org.springframework.boot:spring-boot-gradle-plugin:2.7.9")
     implementation("io.spring.gradle:dependency-management-plugin")
-
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
@@ -47,25 +44,3 @@ tasks.withType<KotlinCompile> {
 tasks.withType<Test> {
     useJUnitPlatform()
 }
-val grpcVersion = "1.53.0"
-val protobufVersion = "3.22.0"
-val generatedFilesBaseDir = "$projectDir/src/generated"
-
-
-//protobuf {
-//    protoc{
-//        artifact = "com.google.protobuf:protobuf-java:3.22.0"
-//    }
-//
-//    generateProtoTasks{
-//        all().forEach {task ->
-//                task.builtins{
-//                    remove(GenerateProtoTask.PluginOptions("java"))
-//                }
-////            task.plugins {
-////                javalite {}
-////            }
-//
-//        }
-//    }
-//}
