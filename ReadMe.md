@@ -1,0 +1,6 @@
+## kafka를 사용하는 토이프로젝트 입니다
+
+아래 링크의 블로그를 보며 만들었습니다.
+
+https://devocean.sk.com/blog/techBoardDetail.do?ID=164007
+https://velog.io/@taehodot/SpringBoot-%EC%B9%B4%ED%94%84%EC%B9%B4%EC%99%80-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8-%EC%97%B0%EB%8F%99
